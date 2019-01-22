@@ -8,9 +8,9 @@ const Card = ({children, isLast}) => (
       css={css`
         background: #fff;
         border-radius: 0.5rem;
-        padding: 2rem 1rem 1.5rem;
+        padding: 2rem 1rem 1rem;
         ${ns} {
-          padding: 2rem 2rem 1.5rem;
+          padding: 2rem 2rem 1rem;
         }
       `}
     >

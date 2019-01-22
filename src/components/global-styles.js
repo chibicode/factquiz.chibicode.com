@@ -41,6 +41,11 @@ const GlobalStyles = () => (
           width: auto;
         }
 
+        img {
+          display: block;
+          max-width: 100%;
+        }
+
         ${ns} {
           html {
             font-size: 21px;
