@@ -36,6 +36,11 @@ const GlobalStyles = () => (
           background-color: #efe5c8;
         }
 
+        button {
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+        }
+
         svg {
           height: 100%;
           width: auto;
