@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import {jsx, css} from '@emotion/core'
 
-const ChoiceButton = ({children, isSelected}) => (
+const ChoiceButton = ({children, isSelected, onClick}) => (
   <button
     type="button"
     css={css`
@@ -15,6 +15,7 @@ const ChoiceButton = ({children, isSelected}) => (
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
+      font-weight: ${isSelected ? 'bold' : 'normal'};
       background-color: ${isSelected ? '#ECF3FD' : '#fff'};
       color: ${isSelected ? '#074da2' : '#666'};
       border-color: ${isSelected ? '#074da2' : '#ccc'};
@@ -30,6 +31,7 @@ const ChoiceButton = ({children, isSelected}) => (
         outline: none;
       }
     `}
+    onClick={onClick}
   >
     {children}
   </button>

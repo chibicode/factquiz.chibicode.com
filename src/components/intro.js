@@ -26,7 +26,7 @@ const Intro = () => (
         color: #999;
       `}
     >
-      by 上杉周作 (ファクトフルネス共訳者)
+      ファクトフルネス共訳者(上杉)作成
     </p>
     <p>
       <a href="https://amzn.to/2CMacFZ">
