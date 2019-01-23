@@ -1,5 +1,8 @@
 import App from 'next/app'
-import Router from 'next/router'
-import withGA from 'next-ga'
+import ReactGA from 'react-ga'
 
-export default withGA('UA-32987822-21', Router)(App)
+ReactGA.initialize('UA-32987822-21')
+ReactGA.set({anonymizeIp: true})
+ReactGA.pageview(window.location.pathname + window.location.search)
+
+export default App
