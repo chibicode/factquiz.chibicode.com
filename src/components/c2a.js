@@ -13,7 +13,7 @@ const C2A = () => (
       css={css`
         margin-top: -0.25rem;
         font-size: 1rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         text-align: center;
       `}
     >
@@ -39,14 +39,9 @@ const C2A = () => (
       <strong>Kindle版のサンプル</strong>
       にクイズの正解が載っています。サンプルは無料ですのでぜひ。
     </p>
-    <p
-      css={css`
-        margin-bottom: 2rem;
-      `}
-    >
+    <p>
       <AmazonLink css={submitButtonCss}>Amazonで見る</AmazonLink>
     </p>
-    <p>最後にそれぞれの質問を再度掲載します。</p>
   </>
 )
 

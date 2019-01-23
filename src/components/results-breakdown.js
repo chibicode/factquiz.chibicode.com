@@ -13,7 +13,7 @@ const ResultsBreakdown = ({selectedAnswers}) => (
       css={css`
         margin-top: -0.25rem;
         font-size: 1rem;
-        margin-bottom: 0.54rem;
+        margin-bottom: 0.75rem;
         text-align: center;
       `}
     >
