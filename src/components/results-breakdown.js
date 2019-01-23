@@ -1,0 +1,54 @@
+/** @jsx jsx */
+import {jsx, css} from '@emotion/core'
+import {problems, score} from '../lib/quiz'
+import Emoji from './emoji'
+import CircleEmoji from './twemoji/2b55'
+import CrossEmoji from './twemoji/274c'
+import ThinkEmoji from './twemoji/1f914'
+import MonkeyEmoji from './twemoji/1f435'
+
+const ResultsBreakdown = ({selectedAnswers}) => (
+  <>
+    <h3
+      css={css`
+        margin-top: -0.25rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      `}
+    >
+      <Emoji large>
+        <ThinkEmoji />
+      </Emoji>{' '}
+      質問別の結果はこちら！
+      <Emoji large>
+        <MonkeyEmoji />
+      </Emoji>
+    </h3>
+    <ol
+      css={css`
+        list-style-type: none;
+        margin: 0 0 1rem;
+        font-size: 0.85rem;
+        padding-inline-start: 0;
+      `}
+    >
+      {problems.map(({short, answer}, index) => (
+        <li key={short}>
+          {answer === selectedAnswers[index] ? (
+            <Emoji>
+              <CircleEmoji />
+            </Emoji>
+          ) : (
+            <Emoji>
+              <CrossEmoji />
+            </Emoji>
+          )}{' '}
+          <strong>質問{index + 1}</strong>: {short}
+        </li>
+      ))}
+    </ol>
+  </>
+)
+
+export default ResultsBreakdown

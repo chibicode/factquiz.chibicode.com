@@ -8,6 +8,19 @@ import HappyEmoji from './twemoji/1f601'
 import EyeEmoji from './twemoji/1f644'
 import Emoji from './emoji'
 
+const colors = {
+  win: '#074da2',
+  tie: '#5207A2',
+  lose: '#dc2e44'
+}
+
+const quietCss = css`
+  text-align: center;
+  color: #777;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+`
+
 const ResultsIntro = ({score}) => {
   let result
   if (score > 4) {
@@ -31,9 +44,9 @@ const ResultsIntro = ({score}) => {
       </p>
       <h1
         css={css`
-          margin: 0 0 0.5rem;
+          margin: 0rem;
           text-align: center;
-          font-size: 1.75rem;
+          font-size: 1.5rem;
           line-height: 1.2;
         `}
       >
@@ -43,20 +56,29 @@ const ResultsIntro = ({score}) => {
             に
             <span
               css={css`
-                color: #074da2;
+                color: ${colors.win};
               `}
             >
               勝利！
             </span>
           </>
         ) : result === 'tie' ? (
-          'と引き分け！'
+          <>
+            と
+            <span
+              css={css`
+                color: ${colors.tie};
+              `}
+            >
+              引き分け！
+            </span>
+          </>
         ) : (
           <>
             に
             <span
               css={css`
-                color: #dc2e44;
+                color: ${colors.lose};
               `}
             >
               敗北！
@@ -67,8 +89,7 @@ const ResultsIntro = ({score}) => {
       <div
         css={css`
           text-align: center;
-          font-size: 4rem;
-          margin-bottom: 1rem;
+          font-size: 3rem;
         `}
       >
         {result === 'win' ? (
@@ -101,6 +122,24 @@ const ResultsIntro = ({score}) => {
           </>
         )}
       </div>
+      <h2
+        css={css`
+          margin: 0;
+          font-size: 1.5rem;
+          text-align: center;
+        `}
+      >
+        12問中「
+        <span
+          css={css`
+            color: ${colors[result]};
+          `}
+        >
+          {score}問
+        </span>
+        」正解！
+      </h2>
+      <p css={quietCss}>(チンパンジーは平均「4問」正解します)</p>
     </>
   )
 }
