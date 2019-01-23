@@ -4,6 +4,7 @@ import {problems, score} from '../lib/quiz'
 import Card from './card'
 import ResultsIntro from './results-intro'
 import ResultsBreakdown from './results-breakdown'
+import C2A from './c2a'
 import QuizResultChoice from './quiz-result-choice'
 
 const QuizResults = ({selectedAnswers}) => (
@@ -13,6 +14,9 @@ const QuizResults = ({selectedAnswers}) => (
     </Card>
     <Card>
       <ResultsBreakdown selectedAnswers={selectedAnswers} />
+    </Card>
+    <Card>
+      <C2A />
     </Card>
     {problems.map(({text, choices, useGraphic, answer}, index) => (
       <Card

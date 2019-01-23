@@ -4,6 +4,8 @@ import MonkeyEmoji from './twemoji/1f435'
 import ThinkEmoji from './twemoji/1f914'
 import VsEmoji from './twemoji/1f19a'
 import Emoji from './emoji'
+import Book from './book'
+import AmazonLink from './amazon-link'
 
 const Intro = () => (
   <>
@@ -29,23 +31,13 @@ const Intro = () => (
       ファクトフルネス共訳者(上杉)作成
     </p>
     <p>
-      <a href="https://amzn.to/2CMacFZ">
-        <img
-          src="/static/images/cover-obi.jpg"
-          alt="FACTFULNESS ファクトフルネス"
-          css={css`
-            max-width: 180px;
-            margin: 0 auto;
-            border: 1px solid #c7bfa7;
-          `}
-        />
-      </a>
+      <Book />
     </p>
     <p>
       2019年1月に発売された本『
-      <a href="https://amzn.to/2CMacFZ">
+      <AmazonLink href="https://amzn.to/2CMacFZ">
         <strong>FACTFULNESS (ファクトフルネス)</strong>
-      </a>
+      </AmazonLink>
       』の冒頭には、世界の事実に関するクイズが載っています。
     </p>
     <p
@@ -53,7 +45,7 @@ const Intro = () => (
         margin-bottom: 0;
       `}
     >
-      どの問題もA・B・Cの3択問題です。つまり、仮にチンパンジーにこのクイズを出したら、正解率はだいたい「3分の1」になります。
+      どの質問もA・B・Cの3択です。つまり、仮にチンパンジーにこのクイズを出したら、正解率はだいたい「3分の1」になります。
     </p>
     <div
       css={css`

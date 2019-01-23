@@ -2,7 +2,7 @@ import React from 'react'
 import NextHead from 'next/head'
 
 export const title = '『ファクトフルネス』チンパンジークイズ'
-export const description = '世界の事実にまつわる12の問題を解いてみよう'
+export const description = '世界の事実にまつわる12の質問にチャレンジ'
 export const imageUrl = ''
 
 const Head = () => (
