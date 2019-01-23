@@ -23,7 +23,7 @@ const Intro = () => (
       css={css`
         text-align: center;
         font-size: 0.85rem;
-        color: #999;
+        color: #777;
       `}
     >
       ファクトフルネス共訳者(上杉)作成

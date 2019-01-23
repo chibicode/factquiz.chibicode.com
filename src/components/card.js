@@ -2,11 +2,11 @@
 import {jsx, css} from '@emotion/core'
 import {ns} from './global-styles'
 
-const Card = ({children, isLast}) => (
+const Card = ({children, isLast, backgroundColor}) => (
   <>
     <section
       css={css`
-        background: #fff;
+        background: ${backgroundColor};
         border-radius: 0.5rem;
         padding: 2rem 1rem 1rem;
         ${ns} {
@@ -30,7 +30,8 @@ const Card = ({children, isLast}) => (
 )
 
 Card.defaultProps = {
-  isLast: false
+  isLast: false,
+  backgroundColor: '#fff'
 }
 
 export default Card

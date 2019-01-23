@@ -7,6 +7,7 @@ const Emoji = ({children}) => (
       display: inline-flex;
       vertical-align: middle;
       height: 1em;
+      transform: translateY(-0.1em);
     `}
   >
     {children}

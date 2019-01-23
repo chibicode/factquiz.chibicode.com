@@ -6,13 +6,33 @@ import QuizResults from './quiz-results'
 
 export default class Quiz extends Component {
   state = {
-    selectedAnswers: [],
-    submitted: false
+    selectedAnswers: [
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a',
+      'a'
+    ],
+    // SelectedAnswers: [],
+    submitted: true
   }
 
   constructor(props) {
     super(props)
     this.problemsWrapper = createRef()
+  }
+
+  submit = () => {
+    this.setState({
+      submitted: true
+    })
   }
 
   setAnswer = ({index, answer}) => () => {
@@ -54,7 +74,7 @@ export default class Quiz extends Component {
   render() {
     const {submitted, selectedAnswers} = this.state
     return submitted ? (
-      <QuizResults />
+      <QuizResults selectedAnswers={selectedAnswers} />
     ) : (
       <div
         css={css`
@@ -65,6 +85,7 @@ export default class Quiz extends Component {
           <QuizProblems
             selectedAnswers={selectedAnswers}
             setAnswer={this.setAnswer}
+            submit={this.submit}
           />
         </div>
         {selectedAnswers.length < 12 && (
@@ -72,7 +93,7 @@ export default class Quiz extends Component {
             css={css`
               text-align: right;
               margin-top: 1rem;
-              color: #999;
+              color: #777;
               font-size: 0.85rem;
             `}
           >

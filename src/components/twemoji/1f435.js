@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Svg1f435 = props => (
   <svg viewBox="0 0 36 36" {...props}>
@@ -39,6 +39,6 @@ const Svg1f435 = props => (
       d="M22.66.175s-5.455-1.091-7.636 2.182 4.364 1.091 4.364 1.091S20.478.175 22.66.175z"
     />
   </svg>
-)
+);
 
-export default Svg1f435
+export default Svg1f435;

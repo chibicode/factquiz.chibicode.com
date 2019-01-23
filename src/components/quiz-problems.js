@@ -3,16 +3,11 @@ import {jsx, css} from '@emotion/core'
 import {problems} from '../lib/quiz'
 import Card from './card'
 import Intro from './intro'
+import Outro from './outro'
+import Map from './map'
 import ChoiceButton from './choice-button'
 
-const mapCss = css`
-  height: 180px;
-  border-radius: 0.25rem;
-  margin-left: auto;
-  margin-right: auto;
-`
-
-const QuizProblems = ({setAnswer, selectedAnswers}) => (
+const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
   <>
     <Card>
       <Intro />
@@ -20,13 +15,7 @@ const QuizProblems = ({setAnswer, selectedAnswers}) => (
     {problems.map(
       ({text, choices, useGraphic}, index) =>
         selectedAnswers.length >= index && (
-          <Card
-            key={text}
-            isLast={
-              selectedAnswers.length === index ||
-              (selectedAnswers.length === 12 && index === 11)
-            }
-          >
+          <Card key={text} isLast={selectedAnswers.length === index}>
             <h3
               css={css`
                 margin-top: 0;
@@ -36,7 +25,7 @@ const QuizProblems = ({setAnswer, selectedAnswers}) => (
             >
               <span
                 css={css`
-                  color: #999;
+                  color: #777;
                 `}
               >
                 質問{index + 1}:
@@ -48,49 +37,25 @@ const QuizProblems = ({setAnswer, selectedAnswers}) => (
                 isSelected={selectedAnswers[index] === 'a'}
                 onClick={setAnswer({index, answer: 'a'})}
               >
-                {useGraphic ? (
-                  <img
-                    src="/static/images/map-a.png"
-                    alt="Map A"
-                    css={mapCss}
-                  />
-                ) : (
-                  choices.a
-                )}
+                {useGraphic ? <Map choice="a" /> : choices.a}
               </ChoiceButton>
               <ChoiceButton
                 isSelected={selectedAnswers[index] === 'b'}
                 onClick={setAnswer({index, answer: 'b'})}
               >
-                {useGraphic ? (
-                  <img
-                    src="/static/images/map-b.png"
-                    alt="Map B"
-                    css={mapCss}
-                  />
-                ) : (
-                  choices.b
-                )}
+                {useGraphic ? <Map choice="b" /> : choices.b}
               </ChoiceButton>
               <ChoiceButton
                 isSelected={selectedAnswers[index] === 'c'}
                 onClick={setAnswer({index, answer: 'c'})}
               >
-                {useGraphic ? (
-                  <img
-                    src="/static/images/map-c.png"
-                    alt="Map C"
-                    css={mapCss}
-                  />
-                ) : (
-                  choices.c
-                )}
+                {useGraphic ? <Map choice="c" /> : choices.c}
               </ChoiceButton>
             </>
             {index === 0 && (
               <p
                 css={css`
-                  color: #999;
+                  color: #777;
                   font-size: 0.85rem;
                 `}
               >
@@ -101,6 +66,11 @@ const QuizProblems = ({setAnswer, selectedAnswers}) => (
             )}
           </Card>
         )
+    )}
+    {selectedAnswers.length === 12 && (
+      <Card isLast>
+        <Outro submit={submit} />
+      </Card>
     )}
   </>
 )
