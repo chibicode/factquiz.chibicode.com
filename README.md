@@ -10,6 +10,7 @@
 
 ## ライセンスについて
 
+- 絵文字のアイコンはTwitter社が作成した[Twemoji](https://github.com/twitter/twemoji)を利用しています(グラフィックのライセンスはCC-BY 4.0)
 - このクイズは前述した『FACTFULNESS（ファクトフルネス』の共訳者である上杉周作が作成しています。コンテンツとは関係ないコードについては、[MITライセンスで公開しています](LICENSE-CODE.md)。
 - ギャップマインダーがオンライン上([www.gapminder.org](https://www.gapminder.org))で公開しているコンテンツはすべてCC BY 4.0ライセンスです([参考](https://www.gapminder.org/free-material/))。クイズそのものや、クイズ内で使われているイラストは、ギャップマインダー財団が無償で公開している資料を基にしています。
 - クイズの日本語訳は、前述の『FACTFULNESS（ファクトフルネス)』の9~13ページの文章を、出版社の許可を得て利用しています。
