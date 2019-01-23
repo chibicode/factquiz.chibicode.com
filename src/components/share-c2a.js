@@ -1,18 +1,13 @@
 /** @jsx jsx */
 import {jsx, css} from '@emotion/core'
 import Emoji from './emoji'
-import BookEMoji from './twemoji/1f4d9'
-import GlassesEmoji from './twemoji/1f9d0'
-import Book from './book'
-import AmazonLink from './amazon-link'
 import SorryEmoji from './twemoji/1f647-1f3fb-200d-2642-fe0f'
-import {submitButtonCss} from './outro'
 
 const noOpLink = e => {
   e.preventDefault()
 }
 
-const Share2CA = () => (
+const Share2CA = ({isBottom}) => (
   <>
     <h3
       css={css`
@@ -56,7 +51,25 @@ const Share2CA = () => (
         text-align: center;
       `}
     >
-      以下、質問を再度掲載していきます。
+      {isBottom ? (
+        <span
+          css={css`
+            color: #777;
+          `}
+        >
+          このクイズについて詳しくは
+          <a
+            href="https://github.com/chibicode/factquiz.chibicode.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            こちら
+          </a>
+          。
+        </span>
+      ) : (
+        <>以下、質問を再度掲載していきます。</>
+      )}
     </p>
   </>
 )

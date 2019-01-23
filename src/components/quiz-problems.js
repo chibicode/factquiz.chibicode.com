@@ -7,6 +7,11 @@ import Outro from './outro'
 import Map from './map'
 import ChoiceButton from './choice-button'
 
+const quietCss = css`
+  color: #777;
+  font-size: 0.85rem;
+`
+
 const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
   <>
     <Card>
@@ -53,16 +58,31 @@ const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
               </ChoiceButton>
             </>
             {index === 0 && (
-              <p
-                css={css`
-                  color: #777;
-                  font-size: 0.85rem;
-                `}
-              >
-                正しいと思う答えを選んでみてください。最後にある「
-                <strong>何問正解したかチェック！</strong>
-                」ボタンを押すまで何度でも選び直すことができます。
-              </p>
+              <>
+                <p css={quietCss}>
+                  正しいと思う答えを選んでみてください。最後にある「
+                  <strong>何問正解したかチェック！</strong>
+                  」ボタンを押すまで何度でも選び直すことができます。
+                </p>
+                <p css={quietCss}>
+                  このクイズについて詳しくは
+                  <a
+                    href="https://github.com/chibicode/factquiz.chibicode.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    こちら
+                  </a>
+                  。
+                </p>
+              </>
+            )}
+            {index === 11 && (
+              <>
+                <p css={quietCss}>
+                  『ファクトフルネス』の本にはこの次に13問目がありますが、ほとんどの人が正解するボーナス問題なので省いています。つまり、これが最終問題です！
+                </p>
+              </>
             )}
           </Card>
         )

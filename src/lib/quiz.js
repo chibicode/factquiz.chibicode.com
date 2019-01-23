@@ -127,12 +127,3 @@ export const problems = [
 export const score = selectedAnswers =>
   selectedAnswers.filter((answer, index) => problems[index].answer === answer)
     .length
-
-export const firstIncorrect = selectedAnswers => {
-  for (let i = 0; i < selectedAnswers.length; i++) {
-    if (selectedAnswers[i] !== problems[i].answer) {
-      return i
-    }
-  }
-  return -1
-}

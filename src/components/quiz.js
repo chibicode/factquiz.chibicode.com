@@ -6,22 +6,8 @@ import QuizResults from './quiz-results'
 
 export default class Quiz extends Component {
   state = {
-    selectedAnswers: [
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a',
-      'a'
-    ],
-    // SelectedAnswers: [],
-    submitted: true
+    selectedAnswers: [],
+    submitted: false
   }
 
   constructor(props) {
@@ -65,6 +51,14 @@ export default class Quiz extends Component {
     ) {
       window.scrollTo({
         top: snapshot,
+        left: 0,
+        behavior: 'smooth'
+      })
+    }
+
+    if (!prevState.submitted && this.state.submitted) {
+      window.scrollTo({
+        top: 0,
         left: 0,
         behavior: 'smooth'
       })

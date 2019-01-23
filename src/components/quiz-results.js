@@ -74,6 +74,12 @@ const QuizResults = ({selectedAnswers}) => (
         </div>
       </Card>
     ))}
+    <Card>
+      <C2A />
+    </Card>
+    <Card isLast>
+      <Share2CA isBottom />
+    </Card>
   </>
 )
 
