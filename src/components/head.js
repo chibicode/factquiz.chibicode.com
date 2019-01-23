@@ -55,6 +55,19 @@ const Head = () => (
         __html: `{"name":"${title}","@type":"WebSite","url":"https://factquiz.chibicode.com/","image":"${imageUrl}","headline":"${title}","@context":"http://schema.org"}`
       }}
     />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-32987822-21"
+    />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-32987822-21', { 'anonymize_ip': true });`
+      }}
+    />
   </NextHead>
 )
 
