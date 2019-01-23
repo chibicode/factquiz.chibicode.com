@@ -30,7 +30,7 @@ const ResultsBreakdown = ({selectedAnswers}) => (
         list-style-type: none;
         margin: 0 0 1rem;
         font-size: 0.85rem;
-        padding-inline-start: 0;
+        padding: 0;
       `}
     >
       {problems.map(({short, answer}, index) => (
