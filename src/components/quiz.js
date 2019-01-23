@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {jsx, css} from '@emotion/core'
 import {createRef, Component} from 'react'
+import ReactGA from 'react-ga'
 import QuizProblems from './quiz-problems'
 import QuizResults from './quiz-results'
 
@@ -8,6 +9,12 @@ export default class Quiz extends Component {
   state = {
     selectedAnswers: [],
     submitted: false
+  }
+
+  componentDidMount() {
+    ReactGA.initialize('UA-32987822-21')
+    ReactGA.set({anonymizeIp: true})
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
   constructor(props) {
