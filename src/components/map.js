@@ -17,7 +17,10 @@ const Map = ({choice, isSelected, isSemiTransparent}) => (
       isSemiTransparent &&
         css`
           opacity: 0.5;
-        `
+        `,
+      css`
+        border: 2px solid ${isSelected ? '#074da2' : '#777'};
+      `
     ]}
   />
 )

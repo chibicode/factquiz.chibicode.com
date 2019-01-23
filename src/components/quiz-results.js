@@ -2,13 +2,13 @@
 import {jsx, css} from '@emotion/core'
 import {problems} from '../lib/quiz'
 import Card from './card'
-import Intro from './intro'
+import ResultsIntro from './results-intro'
 import QuizResultChoice from './quiz-result-choice'
 
 const QuizResults = ({selectedAnswers}) => (
   <>
     <Card>
-      <Intro />
+      <ResultsIntro />
     </Card>
     {problems.map(({text, choices, useGraphic, answer}, index) => (
       <Card

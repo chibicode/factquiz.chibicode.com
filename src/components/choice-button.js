@@ -17,7 +17,7 @@ const ChoiceButton = ({children, isSelected, onClick}) => (
       margin-right: auto;
       font-weight: ${isSelected ? 'bold' : 'normal'};
       background-color: ${isSelected ? '#ECF3FD' : '#fff'};
-      color: ${isSelected ? '#074da2' : '#666'};
+      color: ${isSelected ? '#074da2' : '#777'};
       border-color: ${isSelected ? '#074da2' : '#ccc'};
       border-radius: 0.25rem;
 

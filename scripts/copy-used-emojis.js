@@ -1,6 +1,17 @@
 const twemoji = require('twemoji')
 
-const allUsedEmojis = ['🤔', '🆚', '🐵', '⭕️', '❌']
+const allUsedEmojis = [
+  '🤔',
+  '🆚',
+  '🐵',
+  '⭕️',
+  '❌',
+  '😭',
+  '😁',
+  '🙄',
+  '🙊',
+  '🙉'
+]
 
 // Copied from Twemoji
 const UFE0Fg = /\uFE0F/g
