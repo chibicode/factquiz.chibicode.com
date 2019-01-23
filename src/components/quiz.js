@@ -2,6 +2,7 @@
 import {jsx, css} from '@emotion/core'
 import {createRef, Component} from 'react'
 import ReactGA from 'react-ga'
+import smoothscroll from 'smoothscroll-polyfill'
 import QuizProblems from './quiz-problems'
 import QuizResults from './quiz-results'
 
@@ -12,6 +13,7 @@ export default class Quiz extends Component {
   }
 
   componentDidMount() {
+    smoothscroll.polyfill()
     ReactGA.initialize('UA-32987822-21')
     ReactGA.set({anonymizeIp: true})
     ReactGA.pageview(window.location.pathname + window.location.search)
