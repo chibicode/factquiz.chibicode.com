@@ -47,6 +47,19 @@ const ResultsBreakdown = ({selectedAnswers}) => (
           <strong>質問{index + 1}</strong>: {short}
         </li>
       ))}
+      <li
+        css={css`
+          margin-top: 0.5rem;
+        `}
+      >
+        <span
+          css={css`
+            color: #777;
+          `}
+        >
+          (本には「質問13」がありますが、ボーナス問題なので省きました)
+        </span>
+      </li>
     </ol>
   </>
 )
