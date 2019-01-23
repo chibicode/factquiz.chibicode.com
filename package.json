@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export",
+    "twemoji": "mkdir -p .twemoji && rm -f src/components/twemoji/* && rm -f .twemoji/* && cp `node ./scripts/copy-used-emojis.js` .twemoji && svgr --filename-case kebab --no-dimensions -d src/components/twemoji .twemoji && xo src/components/twemoji --fix"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@zeit/next-css": "^1.0.1",
+    "lodash": "^4.17.11",
+    "modern-normalize": "^0.5.0",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-ga": "^2.5.6",
+    "smoothscroll-polyfill": "^0.4.3"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^4.1.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-emotion": "^10.0.5",
+    "eslint-config-xo-react": "^0.17.0",
+    "eslint-plugin-react": "^7.12.0",
+    "prettier": "^1.15.3",
+    "twemoji": "^11.2.0",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "prettier": true,
+    "semicolon": false,
+    "space": true,
+    "extends": "xo-react",
+    "parser": "babel-eslint",
+    "globals": [
+      "window"
+    ],
+    "rules": {
+      "react/prop-types": false,
+      "react/no-danger": false,
+      "import/no-unassigned-import": false
+    }
+  }
+}
