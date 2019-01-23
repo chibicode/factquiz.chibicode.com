@@ -81,7 +81,7 @@ export default class Quiz extends Component {
     ) : (
       <div
         css={css`
-          padding-bottom: 25vh;
+          padding-bottom: 20vh;
         `}
       >
         <div ref={this.problemsWrapper}>
