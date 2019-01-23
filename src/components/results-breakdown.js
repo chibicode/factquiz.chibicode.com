@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx, css} from '@emotion/core'
-import {problems, score} from '../lib/quiz'
+import {problems} from '../lib/quiz'
 import Emoji from './emoji'
 import CircleEmoji from './twemoji/2b55'
 import CrossEmoji from './twemoji/274c'
