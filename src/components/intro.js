@@ -24,7 +24,7 @@ const Intro = () => (
     <p
       css={css`
         text-align: center;
-        font-size: 0.85rem;
+        font-size: 0.825rem;
         color: #777;
       `}
     >
@@ -50,7 +50,7 @@ const Intro = () => (
     <div
       css={css`
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.75rem;
         margin-bottom: 1rem;
       `}
     >

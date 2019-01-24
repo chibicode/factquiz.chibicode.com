@@ -9,7 +9,7 @@ import ChoiceButton from './choice-button'
 
 const quietCss = css`
   color: #777;
-  font-size: 0.85rem;
+  font-size: 0.825rem;
 `
 
 const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (

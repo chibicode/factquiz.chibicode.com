@@ -93,7 +93,7 @@ export default class Quiz extends Component {
               text-align: right;
               margin-top: 1rem;
               color: #777;
-              font-size: 0.85rem;
+              font-size: 0.825rem;
             `}
           >
             {selectedAnswers.length === 11 ? (

@@ -52,7 +52,7 @@ const Outro = ({submit}) => (
     <div
       css={css`
         text-align: center;
-        font-size: 3rem;
+        font-size: 2.75rem;
         margin-bottom: 1rem;
       `}
     >

@@ -28,8 +28,9 @@ const ResultsBreakdown = ({selectedAnswers}) => (
     <ol
       css={css`
         list-style-type: none;
+        line-height: 1.6;
         margin: 0 0 1rem;
-        font-size: 0.85rem;
+        font-size: 0.825rem;
         padding: 0;
       `}
     >

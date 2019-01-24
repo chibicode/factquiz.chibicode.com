@@ -17,7 +17,7 @@ const colors = {
 const quietCss = css`
   text-align: center;
   color: #777;
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   margin-bottom: 0.5rem;
 `
 
@@ -36,8 +36,8 @@ const ResultsIntro = ({score}) => {
         css={css`
           text-align: center;
           color: #777;
-          font-size: 0.85rem;
-          margin-bottom: 0.5rem;
+          font-size: 0.825rem;
+          margin-bottom: 0.25rem;
         `}
       >
         『<strong>ファクトフルネス</strong>』クイズの結果
@@ -89,7 +89,7 @@ const ResultsIntro = ({score}) => {
       <div
         css={css`
           text-align: center;
-          font-size: 3rem;
+          font-size: 2.75rem;
         `}
       >
         {result === 'win' ? (
@@ -139,7 +139,7 @@ const ResultsIntro = ({score}) => {
         </span>
         」正解！
       </h2>
-      <p css={quietCss}>(チンパンジーは平均「4問」正解します)</p>
+      <p css={quietCss}>チンパンジーは平均「4問」正解します</p>
     </>
   )
 }

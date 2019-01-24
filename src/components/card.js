@@ -20,7 +20,7 @@ const Card = ({children, isLast, backgroundColor}) => (
       <div
         css={css`
           width: 1.25rem;
-          height: 1.25rem;
+          height: 1rem;
           ${ns} {
             height: 1.75rem;
           }
