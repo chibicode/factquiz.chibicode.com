@@ -3,7 +3,11 @@ import {jsx, css} from '@emotion/core'
 import AmazonLink from './amazon-link'
 
 const Book = () => (
-  <AmazonLink>
+  <AmazonLink
+    css={css`
+      font-size: 0;
+    `}
+  >
     <img
       src="/static/images/cover-obi.jpg"
       alt="FACTFULNESS ファクトフルネス"
