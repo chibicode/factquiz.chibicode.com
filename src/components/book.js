@@ -8,8 +8,8 @@ const Book = () => (
       src="/static/images/cover-obi.jpg"
       alt="FACTFULNESS ファクトフルネス"
       css={css`
+        display: inline-block;
         max-width: 180px;
-        margin: 0 auto;
         border: 1px solid #c7bfa7;
       `}
     />

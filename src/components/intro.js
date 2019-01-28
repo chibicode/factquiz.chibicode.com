@@ -30,7 +30,11 @@ const Intro = () => (
     >
       ファクトフルネス共訳者(上杉)作成
     </p>
-    <p>
+    <p
+      css={css`
+        text-align: center;
+      `}
+    >
       <Book />
     </p>
     <p>

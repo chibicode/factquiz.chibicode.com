@@ -32,7 +32,11 @@ const C2A = () => (
       </AmazonLink>
       』の冒頭を読んでみてください。
     </p>
-    <p>
+    <p
+      css={css`
+        text-align: center;
+      `}
+    >
       <Book />
     </p>
     <p>
