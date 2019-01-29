@@ -51,7 +51,7 @@ const JpC2A = () => (
     </div>
     <p>
       <ExternalLink
-        href="https://factfulness-jp.chibicode.com"
+        href="https://factquiz-jp.chibicode.com"
         css={submitButtonCss}
       >
         ニホンザルクイズに挑戦
