@@ -6,6 +6,7 @@ import Intro from './intro'
 import Outro from './outro'
 import Map from './map'
 import ChoiceButton from './choice-button'
+import ExternalLink from './external-link'
 
 const quietCss = css`
   color: #777;
@@ -66,13 +67,9 @@ const QuizProblems = ({setAnswer, selectedAnswers, submit}) => (
                 </p>
                 <p css={quietCss}>
                   このクイズについて詳しくは
-                  <a
-                    href="https://github.com/chibicode/factquiz.chibicode.com"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
+                  <ExternalLink href="https://github.com/chibicode/factquiz.chibicode.com">
                     こちら
-                  </a>
+                  </ExternalLink>
                   。
                 </p>
               </>

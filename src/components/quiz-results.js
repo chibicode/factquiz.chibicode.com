@@ -6,6 +6,7 @@ import ResultsIntro from './results-intro'
 import ResultsBreakdown from './results-breakdown'
 import C2A from './c2a'
 import Share2CA from './share-c2a'
+import JpC2A from './jp-c2a'
 import QuizResultChoice from './quiz-result-choice'
 
 const QuizResults = ({selectedAnswers}) => (
@@ -18,6 +19,9 @@ const QuizResults = ({selectedAnswers}) => (
     </Card>
     <Card>
       <C2A />
+    </Card>
+    <Card>
+      <JpC2A />
     </Card>
     <Card>
       <Share2CA />
@@ -76,6 +80,9 @@ const QuizResults = ({selectedAnswers}) => (
     ))}
     <Card>
       <C2A />
+    </Card>
+    <Card>
+      <JpC2A />
     </Card>
     <Card isLast>
       <Share2CA isBottom />

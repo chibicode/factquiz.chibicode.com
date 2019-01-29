@@ -2,6 +2,7 @@
 import {jsx, css} from '@emotion/core'
 import Emoji from './emoji'
 import SorryEmoji from './twemoji/1f647-1f3fb-200d-2642-fe0f'
+import ExternalLink from './external-link'
 
 const noOpLink = e => {
   e.preventDefault()
@@ -58,13 +59,9 @@ const Share2CA = ({isBottom}) => (
           `}
         >
           このクイズについて詳しくは
-          <a
-            href="https://github.com/chibicode/factquiz.chibicode.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://github.com/chibicode/factquiz.chibicode.com">
             こちら
-          </a>
+          </ExternalLink>
           。
         </span>
       ) : (

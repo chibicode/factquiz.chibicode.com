@@ -1,12 +1,8 @@
 import React from 'react'
+import ExternalLink from './external-link'
 
 const AmazonLink = props => (
-  <a
-    href="https://amzn.to/2FRQueY"
-    target="_blank"
-    rel="noopener noreferrer"
-    {...props}
-  />
+  <ExternalLink href="https://amzn.to/2FRQueY" {...props} />
 )
 
 export default AmazonLink
