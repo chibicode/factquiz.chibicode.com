@@ -38,15 +38,12 @@ export default class Quiz extends Component {
 
   getSnapshotBeforeUpdate(_, prevState) {
     if (prevState.selectedAnswers.length < this.state.selectedAnswers.length) {
-      console.log(
-        this.problemsWrapper.current.offsetTop +
-          this.problemsWrapper.current.offsetHeight
-      )
       return (
         this.problemsWrapper.current.offsetTop +
         this.problemsWrapper.current.offsetHeight
       )
     }
+    return null
   }
 
   componentDidUpdate(_, prevState, snapshot) {
