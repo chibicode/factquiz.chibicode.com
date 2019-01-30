@@ -21,9 +21,6 @@ const QuizResults = ({selectedAnswers}) => (
       <C2A />
     </Card>
     <Card>
-      <JpC2A />
-    </Card>
-    <Card>
       <Share2CA />
     </Card>
     {problems.map(({text, choices, useGraphic, answer}, index) => (
@@ -82,10 +79,10 @@ const QuizResults = ({selectedAnswers}) => (
       <C2A />
     </Card>
     <Card>
-      <JpC2A />
+      <Share2CA isBottom />
     </Card>
     <Card isLast>
-      <Share2CA isBottom />
+      <JpC2A />
     </Card>
   </>
 )
