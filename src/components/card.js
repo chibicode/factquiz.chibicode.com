@@ -8,7 +8,7 @@ const Card = ({children, isLast, backgroundColor}) => (
       css={css`
         background: ${backgroundColor};
         border-radius: 0.5rem;
-        padding: 1.25rem 1rem 0.25rem;
+        padding: 1.25rem 0.9rem 0.25rem;
         ${ns} {
           padding: 2rem 2rem 1rem;
         }
