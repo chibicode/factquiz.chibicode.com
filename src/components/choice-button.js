@@ -11,7 +11,7 @@ const ChoiceButton = ({children, isSelected, onClick}) => (
       width: 100%;
       display: block;
       margin-bottom: 1rem;
-      padding: 0.75rem 1rem;
+      padding: 0.75rem;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
