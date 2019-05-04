@@ -23,7 +23,10 @@
 
 ## 作者について
 
-上杉周作 ([shu@chibicode.com](mailto:shu@chibicode.com)) - 『ファクトフルネス』共訳者
+**上杉周作** - 『ファクトフルネス』共訳者
+
+- [メール](mailto:shu@chibicode.com)
+- [ブログ](https://jp.chibicode.com)
 
 ## フレームワークについて
 
