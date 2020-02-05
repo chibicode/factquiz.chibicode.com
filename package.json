@@ -3,16 +3,17 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
+    "now-build": "next build",
     "twemoji": "mkdir -p .twemoji && rm -f src/components/twemoji/* && rm -f .twemoji/* && cp `node ./scripts/copy-used-emojis.js` .twemoji && svgr --filename-case kebab --no-dimensions -d src/components/twemoji .twemoji && xo src/components/twemoji --fix"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.5",
+    "@emotion/core": "^10.0.27",
     "@zeit/next-css": "^1.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "modern-normalize": "^0.5.0",
-    "next": "^7.0.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "smoothscroll-polyfill": "^0.4.3"
   },
   "devDependencies": {
